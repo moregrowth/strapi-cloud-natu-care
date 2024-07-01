@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_common_accordions",
+  "info": {
+    "displayName": "Accordion"
+  },
+  "options": {},
+  "attributes": {
+    "Label": {
+      "type": "string"
+    },
+    "Content": {
+      "type": "text"
+    }
+  }
+}

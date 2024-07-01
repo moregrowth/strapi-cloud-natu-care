@@ -1,75 +1,32 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
-export interface SharedMedia extends Schema.Component {
-  collectionName: 'components_shared_media';
+export interface CommonAccordion extends Schema.Component {
+  collectionName: 'components_common_accordions';
   info: {
-    displayName: 'Media';
-    icon: 'file-video';
+    displayName: 'Accordion';
   };
   attributes: {
-    file: Attribute.Media;
+    Label: Attribute.String;
+    Content: Attribute.Text;
   };
 }
 
-export interface SharedQuote extends Schema.Component {
-  collectionName: 'components_shared_quotes';
+export interface CommonButton extends Schema.Component {
+  collectionName: 'components_common_buttons';
   info: {
-    displayName: 'Quote';
-    icon: 'indent';
+    displayName: 'Button';
   };
   attributes: {
-    title: Attribute.String;
-    body: Attribute.Text;
-  };
-}
-
-export interface SharedRichText extends Schema.Component {
-  collectionName: 'components_shared_rich_texts';
-  info: {
-    displayName: 'Rich text';
-    icon: 'align-justify';
-    description: '';
-  };
-  attributes: {
-    body: Attribute.RichText;
-  };
-}
-
-export interface SharedSeo extends Schema.Component {
-  collectionName: 'components_shared_seos';
-  info: {
-    name: 'Seo';
-    icon: 'allergies';
-    displayName: 'Seo';
-    description: '';
-  };
-  attributes: {
-    metaTitle: Attribute.String & Attribute.Required;
-    metaDescription: Attribute.Text & Attribute.Required;
-    shareImage: Attribute.Media;
-  };
-}
-
-export interface SharedSlider extends Schema.Component {
-  collectionName: 'components_shared_sliders';
-  info: {
-    displayName: 'Slider';
-    icon: 'address-book';
-    description: '';
-  };
-  attributes: {
-    files: Attribute.Media;
+    Label: Attribute.String;
+    Link: Attribute.String;
   };
 }
 
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
-      'shared.media': SharedMedia;
-      'shared.quote': SharedQuote;
-      'shared.rich-text': SharedRichText;
-      'shared.seo': SharedSeo;
-      'shared.slider': SharedSlider;
+      'common.accordion': CommonAccordion;
+      'common.button': CommonButton;
     }
   }
 }

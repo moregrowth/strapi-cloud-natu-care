@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Options": {
+      "type": "enumeration",
+      "enum": [
+        "Hide product",
+        "Enable modal"
+      ]
+    },
+    "Badge": {
+      "type": "string"
+    },
+    "Rating": {
+      "type": "decimal"
+    },
+    "Brand": {
+      "type": "string"
+    },
+    "Content": {
+      "type": "text"
+    },
+    "Accordions": {
+      "type": "dynamiczone",
+      "components": [
+        "common.accordion"
+      ]
+    },
+    "Buttons": {
+      "type": "dynamiczone",
+      "components": [
+        "common.button"
+      ]
+    },
+    "Image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
