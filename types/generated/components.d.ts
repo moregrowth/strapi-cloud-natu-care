@@ -4,10 +4,11 @@ export interface CommonAccordion extends Schema.Component {
   collectionName: 'components_common_accordions';
   info: {
     displayName: 'Accordion';
+    description: '';
   };
   attributes: {
-    Label: Attribute.String;
-    Content: Attribute.Text;
+    label: Attribute.String;
+    content: Attribute.RichText;
   };
 }
 
@@ -15,10 +16,11 @@ export interface CommonButton extends Schema.Component {
   collectionName: 'components_common_buttons';
   info: {
     displayName: 'Button';
+    description: '';
   };
   attributes: {
-    Label: Attribute.String;
-    Link: Attribute.String;
+    label: Attribute.String;
+    link: Attribute.String;
   };
 }
 

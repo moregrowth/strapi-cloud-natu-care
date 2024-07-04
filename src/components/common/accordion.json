@@ -1,15 +1,16 @@
 {
   "collectionName": "components_common_accordions",
   "info": {
-    "displayName": "Accordion"
+    "displayName": "Accordion",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "Label": {
+    "label": {
       "type": "string"
     },
-    "Content": {
-      "type": "text"
+    "content": {
+      "type": "richtext"
     }
   }
 }
