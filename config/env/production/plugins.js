@@ -24,7 +24,7 @@ module.exports = ({ env }) => ({
                  * It is useful because strapi sets folder names with numbers, not by user's input folder name
                  * By default it is false
                  */
-                pool: true
+                pool: false
             },
             actionOptions: {
                 upload: {},
