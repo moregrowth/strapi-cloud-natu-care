@@ -1,8 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-// import { Editor } from "@tinymce/tinymce-react";
-
-import 'tinymce/tinymce';
+import { Editor } from "@tinymce/tinymce-react";
 
 
 const TinyEditor = ({ onChange, name, value }) => {
