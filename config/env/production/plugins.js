@@ -1,5 +1,4 @@
 module.exports = ({ env }) => ({
-    // ...
     upload: {
         config: {
             provider: "strapi-provider-cloudflare-r2",
@@ -25,7 +24,7 @@ module.exports = ({ env }) => ({
                  * It is useful because strapi sets folder names with numbers, not by user's input folder name
                  * By default it is false
                  */
-                pool:  
+                pool: true
             },
             actionOptions: {
                 upload: {},
@@ -34,7 +33,6 @@ module.exports = ({ env }) => ({
             },
         },
     },
-    // ...
     wysiwyg: {
         enabled: true,
         resolve: "./src/plugins/wysiwyg", // path to plugin folder
