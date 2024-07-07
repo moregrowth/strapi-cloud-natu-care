@@ -14,7 +14,8 @@
     "react-router-dom": "5.3.4",
     "strapi-plugin-multi-select": "^1.2.3",
     "strapi-provider-cloudflare-r2": "^0.3.0",
-    "styled-components": "5.3.3"
+    "styled-components": "5.3.3",
+    "@tinymce/tinymce-react": "5.0.1"
   },
   "name": "my-app-name",
   "private": true,
