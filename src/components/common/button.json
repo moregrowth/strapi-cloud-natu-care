@@ -9,7 +9,7 @@
     "label": {
       "type": "string"
     },
-    "link": {
+    "url": {
       "type": "string"
     }
   }

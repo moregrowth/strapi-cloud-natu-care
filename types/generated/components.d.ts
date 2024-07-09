@@ -20,7 +20,7 @@ export interface CommonButton extends Schema.Component {
   };
   attributes: {
     label: Attribute.String;
-    link: Attribute.String;
+    url: Attribute.String;
   };
 }
 
