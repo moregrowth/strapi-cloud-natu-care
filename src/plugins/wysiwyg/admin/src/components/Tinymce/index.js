@@ -13,7 +13,7 @@ const TinyEditor = ({ onChange, name, value }) => {
       onEditorChange={(editorContent) => {
         onChange({ target: { name, value: editorContent } });
       }}
-      outputFormat="text"
+      outputFormat="html"
       init={{}}
     />
   );
