@@ -1,5 +1,13 @@
 module.exports = ({ env }) => ({
     // ...
+    graphql: {
+        config: {
+            endpoint: "/graphql",
+            apolloServer: {
+                introspection: true,
+            },
+        },
+    },
     upload: {
         config: {
             provider: "strapi-provider-cloudflare-r2",
@@ -38,5 +46,5 @@ module.exports = ({ env }) => ({
     wysiwyg: {
         enabled: true,
         resolve: "./src/plugins/wysiwyg", // path to plugin folder
-    }    
+    }
 });
