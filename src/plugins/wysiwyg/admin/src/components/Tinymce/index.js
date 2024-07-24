@@ -15,11 +15,8 @@ const TinyEditor = ({ onChange, name, value }) => {
       }}
       outputFormat="html"
       init={{
-        plugins: [
-          'advlist image code emoticons link lists table'
-        ],
-        toolbar: 'undo redo | blocks | ' +
-          'bold image code italic | bullist numlist | link emoticons',
+        plugins: 'advlist image code emoticons link lists table',
+        toolbar: 'undo redo | blocks | bold image code italic | bullist numlist | link emoticons',
         content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
       }}
     />
