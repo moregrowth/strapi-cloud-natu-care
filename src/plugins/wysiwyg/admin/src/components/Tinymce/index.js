@@ -16,14 +16,10 @@ const TinyEditor = ({ onChange, name, value }) => {
       outputFormat="html"
       init={{
         plugins: [
-          'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
-          'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',
-          'insertdatetime', 'media', 'table', 'code', 'help', 'wordcount'
+          'advlist image code emoticons link lists table'
         ],
         toolbar: 'undo redo | blocks | ' +
-          'bold italic forecolor | alignleft aligncenter ' +
-          'alignright alignjustify | bullist numlist outdent indent | ' +
-          'removeformat | help',
+          'bold image code italic | bullist numlist | link emoticons',
         content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
       }}
     />
