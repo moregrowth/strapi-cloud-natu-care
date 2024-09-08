@@ -1016,7 +1016,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    Variant: Attribute.Enumeration<['v0', 'v1', 'v2']> &
+    variant: Attribute.Enumeration<['v0', 'v1', 'v2']> &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
