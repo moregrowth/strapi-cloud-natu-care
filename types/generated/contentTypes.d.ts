@@ -1100,6 +1100,7 @@ export interface ApiBlogPostBlogPost extends Schema.CollectionType {
     singularName: 'blog-post';
     pluralName: 'blog-posts';
     displayName: 'Blog Post';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1177,7 +1178,7 @@ export interface ApiBlogPostBlogPost extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    Heading: Attribute.String &
+    heading: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1189,7 +1190,7 @@ export interface ApiBlogPostBlogPost extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    Content: Attribute.RichText &
+    content: Attribute.RichText &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
