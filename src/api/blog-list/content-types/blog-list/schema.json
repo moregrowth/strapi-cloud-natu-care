@@ -47,14 +47,15 @@
       "target": "api::seo.seo"
     },
     "featuredImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
       ],
-      "type": "media",
-      "multiple": false,
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -62,14 +63,15 @@
       }
     },
     "thumbnailImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
       ],
-      "type": "media",
-      "multiple": false,
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -90,21 +92,6 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::author.author"
-    },
-    "factChecker": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": false,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
     },
     "slug": {
       "pluginOptions": {
@@ -169,6 +156,19 @@
         }
       },
       "type": "date"
+    },
+    "factChecker": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::author.author"
+    },
+    "contentfulSysId": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
     }
   }
 }

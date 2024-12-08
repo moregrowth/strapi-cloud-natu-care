@@ -1011,12 +1011,6 @@ export interface ApiBlogListBlogList extends Schema.CollectionType {
       'oneToOne',
       'api::author.author'
     >;
-    factChecker: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     slug: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -1060,6 +1054,17 @@ export interface ApiBlogListBlogList extends Schema.CollectionType {
         };
       }>;
     factCheckedOn: Attribute.Date &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    factChecker: Attribute.Relation<
+      'api::blog-list.blog-list',
+      'oneToOne',
+      'api::author.author'
+    >;
+    contentfulSysId: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
