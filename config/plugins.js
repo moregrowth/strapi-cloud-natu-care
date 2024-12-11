@@ -46,5 +46,31 @@ module.exports = ({ env }) => ({
     wysiwyg: {
         enabled: true,
         resolve: "./src/plugins/wysiwyg", // path to plugin folder
-    }
+    },
+    translate: {
+        enabled: true,
+        config: {
+          // Choose one of the available providers
+          provider: 'deepl',
+          // Pass credentials and other options to the provider
+          providerOptions: {
+            // your API key - required and wil cause errors if not provided
+            apiKey: '861221aa-3721-4838-b4e5-d5da2c7314f0',
+            // use custom api url - optional
+            // apiUrl: 'https://api-free.deepl.com',
+            // use custom locale mapping (for example 'en' locale is deprecated so need to choose between 'EN-GB' and 'EN-US')
+            localeMap: {
+              EN: 'EN-GB',
+            },
+            apiOptions: {
+              // see <https://github.com/DeepLcom/deepl-node#text-translation-options> for supported options.
+              // note that tagHandling Mode cannot be set this way.
+              // use with caution, as non-default values may break translation of markdown
+              formality: 'default',
+              // ...
+            },
+          },
+          // other options ...
+        }
+      }    
 });
