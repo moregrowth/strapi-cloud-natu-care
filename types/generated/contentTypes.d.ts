@@ -1173,7 +1173,7 @@ export interface ApiBlogListBlogList extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    publishedAtCustom: Attribute.DateTime &
+    updatedAtCustom: Attribute.DateTime &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1385,7 +1385,7 @@ export interface ApiBlogPostBlogPost extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    publishedAtCustom: Attribute.DateTime &
+    updatedAtCustom: Attribute.DateTime &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

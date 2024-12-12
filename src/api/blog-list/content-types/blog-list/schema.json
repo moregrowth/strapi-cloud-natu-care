@@ -216,7 +216,7 @@
       },
       "type": "datetime"
     },
-    "publishedAtCustom": {
+    "updatedAtCustom": {
       "pluginOptions": {
         "i18n": {
           "localized": true
