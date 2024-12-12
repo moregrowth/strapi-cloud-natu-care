@@ -9,7 +9,7 @@
   },
   "options": {
     "draftAndPublish": true,
-    "populateCreatorFields": ["createdBy", "updatedBy"]
+    "populateCreatorFields": ["createdAt", "updatedAt"]
   },
   "pluginOptions": {
     "i18n": {
