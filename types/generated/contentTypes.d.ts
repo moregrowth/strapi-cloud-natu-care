@@ -1040,11 +1040,19 @@ export interface ApiBlogListBlogList extends Schema.CollectionType {
       'api::blog-list.blog-list',
       'oneToOne',
       'api::seo.seo'
-    >;
+    > &
+      Attribute.SetPluginOptions<{
+        translate: {
+          translate: 'translate';
+        };
+      }>;
     featuredImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
+        };
+        translate: {
+          translate: 'translate';
         };
       }>;
     thumbnailImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
@@ -1052,26 +1060,47 @@ export interface ApiBlogListBlogList extends Schema.CollectionType {
         i18n: {
           localized: true;
         };
+        translate: {
+          translate: 'translate';
+        };
       }>;
     author: Attribute.Relation<
       'api::blog-list.blog-list',
       'oneToOne',
       'api::author.author'
-    >;
+    > &
+      Attribute.SetPluginOptions<{
+        translate: {
+          translate: 'translate';
+        };
+      }>;
     editedBy: Attribute.Relation<
       'api::blog-list.blog-list',
       'oneToOne',
       'api::author.author'
-    >;
+    > &
+      Attribute.SetPluginOptions<{
+        translate: {
+          translate: 'translate';
+        };
+      }>;
     reviewedBy: Attribute.Relation<
       'api::blog-list.blog-list',
       'oneToOne',
       'api::author.author'
-    >;
+    > &
+      Attribute.SetPluginOptions<{
+        translate: {
+          translate: 'translate';
+        };
+      }>;
     slug: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
+        };
+        translate: {
+          translate: 'translate';
         };
       }>;
     shortHeading: Attribute.String &
@@ -1079,11 +1108,17 @@ export interface ApiBlogListBlogList extends Schema.CollectionType {
         i18n: {
           localized: true;
         };
+        translate: {
+          translate: 'translate';
+        };
       }>;
     heading: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
+        };
+        translate: {
+          translate: 'translate';
         };
       }>;
     shortContent: Attribute.Text &
@@ -1091,11 +1126,17 @@ export interface ApiBlogListBlogList extends Schema.CollectionType {
         i18n: {
           localized: true;
         };
+        translate: {
+          translate: 'translate';
+        };
       }>;
     content: Attribute.RichText &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
+        };
+        translate: {
+          translate: 'translate';
         };
       }>;
     editedOn: Attribute.Date &
@@ -1120,8 +1161,28 @@ export interface ApiBlogListBlogList extends Schema.CollectionType {
       'api::blog-list.blog-list',
       'oneToOne',
       'api::author.author'
-    >;
+    > &
+      Attribute.SetPluginOptions<{
+        translate: {
+          translate: 'translate';
+        };
+      }>;
     contentfulSysId: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+        translate: {
+          translate: 'translate';
+        };
+      }>;
+    contentfulCreatedAt: Attribute.Date &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    contentfulPublishedAt: Attribute.Date &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1190,11 +1251,19 @@ export interface ApiBlogPostBlogPost extends Schema.CollectionType {
       'api::blog-post.blog-post',
       'oneToOne',
       'api::seo.seo'
-    >;
+    > &
+      Attribute.SetPluginOptions<{
+        translate: {
+          translate: 'translate';
+        };
+      }>;
     featuredImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
+        };
+        translate: {
+          translate: 'translate';
         };
       }>;
     thumbnailImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
@@ -1202,31 +1271,57 @@ export interface ApiBlogPostBlogPost extends Schema.CollectionType {
         i18n: {
           localized: true;
         };
+        translate: {
+          translate: 'translate';
+        };
       }>;
     author: Attribute.Relation<
       'api::blog-post.blog-post',
       'oneToOne',
       'api::author.author'
-    >;
+    > &
+      Attribute.SetPluginOptions<{
+        translate: {
+          translate: 'translate';
+        };
+      }>;
     editedBy: Attribute.Relation<
       'api::blog-post.blog-post',
       'oneToOne',
       'api::author.author'
-    >;
+    > &
+      Attribute.SetPluginOptions<{
+        translate: {
+          translate: 'translate';
+        };
+      }>;
     reviewedBy: Attribute.Relation<
       'api::blog-post.blog-post',
       'oneToOne',
       'api::author.author'
-    >;
+    > &
+      Attribute.SetPluginOptions<{
+        translate: {
+          translate: 'translate';
+        };
+      }>;
     factChecker: Attribute.Relation<
       'api::blog-post.blog-post',
       'oneToOne',
       'api::author.author'
-    >;
+    > &
+      Attribute.SetPluginOptions<{
+        translate: {
+          translate: 'translate';
+        };
+      }>;
     slug: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
+        };
+        translate: {
+          translate: 'translate';
         };
       }>;
     shortHeading: Attribute.String &
@@ -1234,11 +1329,17 @@ export interface ApiBlogPostBlogPost extends Schema.CollectionType {
         i18n: {
           localized: true;
         };
+        translate: {
+          translate: 'translate';
+        };
       }>;
     heading: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
+        };
+        translate: {
+          translate: 'translate';
         };
       }>;
     shortContent: Attribute.Text &
@@ -1246,11 +1347,17 @@ export interface ApiBlogPostBlogPost extends Schema.CollectionType {
         i18n: {
           localized: true;
         };
+        translate: {
+          translate: 'translate';
+        };
       }>;
     content: Attribute.RichText &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
+        };
+        translate: {
+          translate: 'translate';
         };
       }>;
     editedOn: Attribute.Date &
@@ -1275,7 +1382,24 @@ export interface ApiBlogPostBlogPost extends Schema.CollectionType {
       'api::blog-post.blog-post',
       'oneToOne',
       'api::blog-list.blog-list'
-    >;
+    > &
+      Attribute.SetPluginOptions<{
+        translate: {
+          translate: 'translate';
+        };
+      }>;
+    contentfulCreatedAt: Attribute.Date &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    contentfulPublishedAt: Attribute.Date &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
