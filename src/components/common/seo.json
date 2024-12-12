@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_common_seos",
+  "info": {
+    "displayName": "Seo",
+    "icon": "information",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "noindex": {
+      "type": "boolean",
+      "default": false
+    },
+    "nofollow": {
+      "type": "boolean"
+    },
+    "json_schema": {
+      "type": "json"
+    },
+    "description": {
+      "type": "text"
+    },
+    "rss_description": {
+      "type": "string"
+    },
+    "images": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

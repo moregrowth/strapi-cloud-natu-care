@@ -8,8 +8,7 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true,
-    "populateCreatorFields": ["createdAt", "updatedAt"]
+    "draftAndPublish": true
   },
   "pluginOptions": {
     "i18n": {
@@ -212,21 +211,21 @@
         }
       }
     },
-    "contentfulCreatedAt": {
+    "createdAtCustom": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "date"
+      "type": "datetime"
     },
-    "contentfulPublishedAt": {
+    "publishedAtCustom": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "date"
+      "type": "datetime"
     }
   }
 }

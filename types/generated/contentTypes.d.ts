@@ -1012,7 +1012,6 @@ export interface ApiBlogListBlogList extends Schema.CollectionType {
   };
   options: {
     draftAndPublish: true;
-    populateCreatorFields: ['createdBy', 'updatedBy'];
   };
   pluginOptions: {
     i18n: {
@@ -1168,22 +1167,13 @@ export interface ApiBlogListBlogList extends Schema.CollectionType {
           translate: 'translate';
         };
       }>;
-    contentfulSysId: Attribute.String &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-        translate: {
-          translate: 'translate';
-        };
-      }>;
-    createdAtCustom: Attribute.Date &
+    createdAtCustom: Attribute.DateTime &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    publishedAtCustom: Attribute.Date &
+    publishedAtCustom: Attribute.DateTime &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1196,12 +1186,14 @@ export interface ApiBlogListBlogList extends Schema.CollectionType {
       'api::blog-list.blog-list',
       'oneToOne',
       'admin::user'
-    >;
+    > &
+      Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::blog-list.blog-list',
       'oneToOne',
       'admin::user'
-    >;
+    > &
+      Attribute.Private;
     localizations: Attribute.Relation<
       'api::blog-list.blog-list',
       'oneToMany',
@@ -1221,7 +1213,6 @@ export interface ApiBlogPostBlogPost extends Schema.CollectionType {
   };
   options: {
     draftAndPublish: true;
-    populateCreatorFields: ['createdBy', 'updatedBy'];
   };
   pluginOptions: {
     i18n: {
@@ -1388,13 +1379,13 @@ export interface ApiBlogPostBlogPost extends Schema.CollectionType {
           translate: 'translate';
         };
       }>;
-    contentfulCreatedAt: Attribute.Date &
+    createdAtCustom: Attribute.DateTime &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    contentfulPublishedAt: Attribute.Date &
+    publishedAtCustom: Attribute.DateTime &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1407,12 +1398,14 @@ export interface ApiBlogPostBlogPost extends Schema.CollectionType {
       'api::blog-post.blog-post',
       'oneToOne',
       'admin::user'
-    >;
+    > &
+      Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::blog-post.blog-post',
       'oneToOne',
       'admin::user'
-    >;
+    > &
+      Attribute.Private;
     localizations: Attribute.Relation<
       'api::blog-post.blog-post',
       'oneToMany',
