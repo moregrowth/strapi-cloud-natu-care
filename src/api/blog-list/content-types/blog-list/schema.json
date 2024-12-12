@@ -8,7 +8,8 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": true,
+    "populateCreatorFields": ["createdBy", "updatedBy"]
   },
   "pluginOptions": {
     "i18n": {
@@ -219,7 +220,7 @@
       },
       "type": "string"
     },
-    "contentfulCreatedAt": {
+    "createdAtCustom": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -227,7 +228,7 @@
       },
       "type": "date"
     },
-    "contentfulPublishedAt": {
+    "publishedAtCustom": {
       "pluginOptions": {
         "i18n": {
           "localized": true
