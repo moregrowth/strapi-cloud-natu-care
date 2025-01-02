@@ -7,8 +7,7 @@ export interface CommonAccordion extends Struct.ComponentSchema {
     displayName: 'Accordion';
   };
   attributes: {
-    content: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<'plugin::tinymce.tinymce'>;
+    content: Schema.Attribute.RichText;
     label: Schema.Attribute.String;
   };
 }
