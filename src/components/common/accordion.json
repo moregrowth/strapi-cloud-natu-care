@@ -10,7 +10,8 @@
       "type": "string"
     },
     "content": {
-      "type": "richtext"
+      "type": "customField",
+      "customField": "plugin::tinymce.tinymce"
     }
   }
 }
