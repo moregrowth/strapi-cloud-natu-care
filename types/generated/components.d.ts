@@ -1,14 +1,14 @@
-import type { Schema, Attribute } from '@strapi/strapi';
+import type { Attribute, Schema } from '@strapi/strapi';
 
 export interface CommonAccordion extends Schema.Component {
   collectionName: 'components_common_accordions';
   info: {
-    displayName: 'Accordion';
     description: '';
+    displayName: 'Accordion';
   };
   attributes: {
-    label: Attribute.String;
     content: Attribute.RichText;
+    label: Attribute.String;
   };
 }
 
@@ -25,8 +25,8 @@ export interface CommonArray extends Schema.Component {
 export interface CommonButton extends Schema.Component {
   collectionName: 'components_common_buttons';
   info: {
-    displayName: 'Button';
     description: '';
+    displayName: 'Button';
   };
   attributes: {
     label: Attribute.String;
@@ -37,18 +37,18 @@ export interface CommonButton extends Schema.Component {
 export interface CommonSeo extends Schema.Component {
   collectionName: 'components_common_seos';
   info: {
+    description: '';
     displayName: 'Seo';
     icon: 'information';
-    description: '';
   };
   attributes: {
-    title: Attribute.String;
-    noindex: Attribute.Boolean & Attribute.DefaultTo<false>;
-    nofollow: Attribute.Boolean;
-    json_schema: Attribute.JSON;
     description: Attribute.Text;
-    rss_description: Attribute.String;
     images: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    json_schema: Attribute.JSON;
+    nofollow: Attribute.Boolean;
+    noindex: Attribute.Boolean & Attribute.DefaultTo<false>;
+    rss_description: Attribute.String;
+    title: Attribute.String;
   };
 }
 
