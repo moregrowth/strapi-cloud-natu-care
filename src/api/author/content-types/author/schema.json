@@ -126,8 +126,7 @@
           "localized": true
         }
       },
-      "type": "customField",
-      "customField": "plugin::tinymce.tinymce"
+      "type": "richtext"
     },
     "hasOccupation": {
       "pluginOptions": {
