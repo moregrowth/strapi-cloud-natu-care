@@ -393,6 +393,7 @@ export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
         };
       }>;
     content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<'plugin::tinymce.tinymce'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -538,6 +539,7 @@ export interface ApiBlogListBlogList extends Struct.CollectionTypeSchema {
         };
       }>;
     content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<'plugin::tinymce.tinymce'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -723,6 +725,7 @@ export interface ApiBlogPostBlogPost extends Struct.CollectionTypeSchema {
         };
       }>;
     content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<'plugin::tinymce.tinymce'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -999,6 +1002,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
   };
   attributes: {
     content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<'plugin::tinymce.tinymce'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1084,6 +1088,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
         };
       }>;
     content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<'plugin::tinymce.tinymce'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
