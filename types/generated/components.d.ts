@@ -1,15 +1,14 @@
-import type { Schema, Struct } from '@strapi/strapi';
+import type { Schema, Attribute } from '@strapi/strapi';
 
 export interface CommonAccordion extends Struct.ComponentSchema {
   collectionName: 'components_common_accordions';
   info: {
-    description: '';
     displayName: 'Accordion';
+    description: '';
   };
   attributes: {
-    content: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<'plugin::tinymce.tinymce'>;
-    label: Schema.Attribute.String;
+    label: Attribute.String;
+    content: Attribute.RichText;
   };
 }
 
@@ -26,8 +25,8 @@ export interface CommonArray extends Struct.ComponentSchema {
 export interface CommonButton extends Struct.ComponentSchema {
   collectionName: 'components_common_buttons';
   info: {
-    description: '';
     displayName: 'Button';
+    description: '';
   };
   attributes: {
     label: Schema.Attribute.String;
@@ -38,21 +37,18 @@ export interface CommonButton extends Struct.ComponentSchema {
 export interface CommonSeo extends Struct.ComponentSchema {
   collectionName: 'components_common_seos';
   info: {
-    description: '';
     displayName: 'Seo';
     icon: 'information';
+    description: '';
   };
   attributes: {
-    description: Schema.Attribute.Text;
-    images: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
-    json_schema: Schema.Attribute.JSON;
-    nofollow: Schema.Attribute.Boolean;
-    noindex: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    rss_description: Schema.Attribute.String;
-    title: Schema.Attribute.String;
+    title: Attribute.String;
+    noindex: Attribute.Boolean & Attribute.DefaultTo<false>;
+    nofollow: Attribute.Boolean;
+    json_schema: Attribute.JSON;
+    description: Attribute.Text;
+    rss_description: Attribute.String;
+    images: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
   };
 }
 
