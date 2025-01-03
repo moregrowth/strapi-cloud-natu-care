@@ -163,7 +163,6 @@
       },
       "type": "text"
     },
-    
     "content": {
       "pluginOptions": {
         "i18n": {
@@ -173,7 +172,6 @@
           "translate": "translate"
         }
       },
-
       "type": "richtext"
     },
     "editedOn": {
