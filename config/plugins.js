@@ -43,23 +43,26 @@ module.exports = ({ env }) => ({
         },
     },
     // ...
-    wysiwyg: {
-        enabled: true,
-        resolve: "./src/plugins/wysiwyg", // path to plugin folder
-    },
-    translate: {
+    // wysiwyg: {
+    //     enabled: true,
+    //     resolve: "./src/plugins/wysiwyg", // path to plugin folder
+    // },
+    tinymce: {
         enabled: true,
         config: {
-          provider: 'deepl',
-          providerOptions: {
-            apiKey: '861221aa-3721-4838-b4e5-d5da2c7314f0',
-            localeMap: {
-              EN: 'EN-GB',
+            editor: {
+                outputFormat: "html",
+                tinymceSrc: "/js/tinymce/tinymce.min.js", // USE WITH YOUR PUBLIC PATH TO TINYMCE LIBRARY FOR USING SELF HOSTED TINYMCE
+                editorConfig: {
+                    content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }',
+                    language: "pl",
+                    height: 500,
+                    plugins:
+                        "advlist image code emoticons link lists table",
+                    toolbar:
+                        "undo redo | blocks | bold image code italic | bullist numlist | link emoticons",
+                },
             },
-            apiOptions: {
-              formality: 'default',
-            },
-          },
-        }
-      }    
+        },
+    }    
 });
