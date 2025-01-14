@@ -114,8 +114,7 @@
           "localized": true
         }
       },
-      "type": "customField",
-      "customField": "plugin::tinymce.tinymce"
+      "type": "richtext"
     },
     "badgeColor": {
       "pluginOptions": {

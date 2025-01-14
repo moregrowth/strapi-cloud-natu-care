@@ -33,22 +33,26 @@ module.exports = ({ env }) => ({
             },
         },
     },
-    tinymce: {
+    wysiwyg: {
         enabled: true,
-        config: {
-            editor: {
-                outputFormat: "html",
-                tinymceSrc: "/js/tinymce/tinymce.min.js", // USE WITH YOUR PUBLIC PATH TO TINYMCE LIBRARY FOR USING SELF HOSTED TINYMCE
-                editorConfig: {
-                    content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }',
-                    language: "pl",
-                    height: 500,
-                    plugins:
-                        "advlist image code emoticons link lists table",
-                    toolbar:
-                        "undo redo | blocks | bold image code italic | bullist numlist | link emoticons",
-                },
-            },
-        },
-    }    
+        resolve: "./src/plugins/wysiwyg", // path to plugin folder
+    }, 
+    // tinymce: {
+    //     enabled: true,
+    //     config: {
+    //         editor: {
+    //             outputFormat: "html",
+    //             tinymceSrc: "/js/tinymce/tinymce.min.js", // USE WITH YOUR PUBLIC PATH TO TINYMCE LIBRARY FOR USING SELF HOSTED TINYMCE
+    //             editorConfig: {
+    //                 content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }',
+    //                 language: "pl",
+    //                 height: 500,
+    //                 plugins:
+    //                     "advlist image code emoticons link lists table",
+    //                 toolbar:
+    //                     "undo redo | blocks | bold image code italic | bullist numlist | link emoticons",
+    //             },
+    //         },
+    //     },
+    // }    
 });

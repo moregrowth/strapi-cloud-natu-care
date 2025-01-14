@@ -172,8 +172,7 @@
           "translate": "translate"
         }
       },
-      "type": "customField",
-      "customField": "plugin::tinymce.tinymce"
+      "type": "richtext"
     },
     "editedOn": {
       "pluginOptions": {
