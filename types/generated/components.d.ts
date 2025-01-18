@@ -1,41 +1,40 @@
-import type { Schema, Struct } from '@strapi/strapi';
+import type { Attribute, Schema } from '@strapi/strapi';
 
-export interface CommonAccordion extends Struct.ComponentSchema {
+export interface CommonAccordion extends Schema.Component {
   collectionName: 'components_common_accordions';
   info: {
     description: '';
     displayName: 'Accordion';
   };
   attributes: {
-    content: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<'plugin::tinymce.tinymce'>;
-    label: Schema.Attribute.String;
+    content: Attribute.RichText;
+    label: Attribute.String;
   };
 }
 
-export interface CommonArray extends Struct.ComponentSchema {
+export interface CommonArray extends Schema.Component {
   collectionName: 'components_common_arrays';
   info: {
     displayName: 'Array';
   };
   attributes: {
-    name: Schema.Attribute.String;
+    name: Attribute.String;
   };
 }
 
-export interface CommonButton extends Struct.ComponentSchema {
+export interface CommonButton extends Schema.Component {
   collectionName: 'components_common_buttons';
   info: {
     description: '';
     displayName: 'Button';
   };
   attributes: {
-    label: Schema.Attribute.String;
-    url: Schema.Attribute.String;
+    label: Attribute.String;
+    url: Attribute.String;
   };
 }
 
-export interface CommonSeo extends Struct.ComponentSchema {
+export interface CommonSeo extends Schema.Component {
   collectionName: 'components_common_seos';
   info: {
     description: '';
@@ -43,22 +42,19 @@ export interface CommonSeo extends Struct.ComponentSchema {
     icon: 'information';
   };
   attributes: {
-    description: Schema.Attribute.Text;
-    images: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
-    json_schema: Schema.Attribute.JSON;
-    nofollow: Schema.Attribute.Boolean;
-    noindex: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    rss_description: Schema.Attribute.String;
-    title: Schema.Attribute.String;
+    description: Attribute.Text;
+    images: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    json_schema: Attribute.JSON;
+    nofollow: Attribute.Boolean;
+    noindex: Attribute.Boolean & Attribute.DefaultTo<false>;
+    rss_description: Attribute.String;
+    title: Attribute.String;
   };
 }
 
-declare module '@strapi/strapi' {
-  export module Public {
-    export interface ComponentSchemas {
+declare module '@strapi/types' {
+  export module Shared {
+    export interface Components {
       'common.accordion': CommonAccordion;
       'common.array': CommonArray;
       'common.button': CommonButton;
