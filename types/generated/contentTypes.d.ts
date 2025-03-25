@@ -1128,6 +1128,67 @@ export interface ApiPagePage extends Schema.CollectionType {
   };
 }
 
+export interface ApiProductCollectionProductCollection
+  extends Schema.CollectionType {
+  collectionName: 'product_collections';
+  info: {
+    description: '';
+    displayName: 'Product collection';
+    pluralName: 'product-collections';
+    singularName: 'product-collection';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::product-collection.product-collection',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    internalName: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+        translate: {
+          translate: 'translate';
+        };
+      }>;
+    locale: Attribute.String;
+    localizations: Attribute.Relation<
+      'api::product-collection.product-collection',
+      'oneToMany',
+      'api::product-collection.product-collection'
+    >;
+    products: Attribute.Relation<
+      'api::product-collection.product-collection',
+      'oneToMany',
+      'api::product.product'
+    > &
+      Attribute.SetPluginOptions<{
+        translate: {
+          translate: 'translate';
+        };
+      }>;
+    publishedAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::product-collection.product-collection',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiProductProduct extends Schema.CollectionType {
   collectionName: 'products';
   info: {
@@ -1830,6 +1891,7 @@ declare module '@strapi/types' {
       'api::footer.footer': ApiFooterFooter;
       'api::header.header': ApiHeaderHeader;
       'api::page.page': ApiPagePage;
+      'api::product-collection.product-collection': ApiProductCollectionProductCollection;
       'api::product.product': ApiProductProduct;
       'api::seo.seo': ApiSeoSeo;
       'plugin::content-releases.release': PluginContentReleasesRelease;
